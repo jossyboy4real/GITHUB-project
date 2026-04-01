@@ -1,0 +1,2141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.wrapper {
+    background-color: black;
+
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 95%;
+    margin: auto;
+    padding: 15px;
+    background-color: black;
+}
+
+.header-left {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.git {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.menu-toggle i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 400;
+}
+
+nav a:hover {
+    color: gray;
+
+}
+
+
+nav .bi-chevron-down {
+    font-size: 12px;
+    color: gray;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.Platform:hover .bi-chevron-down,
+.solution:hover .bi-chevron-down,
+.resources:hover .bi-chevron-down,
+.open:hover .bi-chevron-down,
+.enterprise:hover .bi-chevron-down {
+    transform: translateY(2px);
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.iconsearch {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 4px 6px;
+    background-color: #57606a88;
+    display: none;
+}
+
+.search1 {
+    color: white;
+}
+
+.icon {
+    display: flex;
+    padding: 7px 7px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    color: white;
+    width: 350px;
+    border: 1px solid gray;
+    background-color: rgb(40, 47, 64);
+    border-radius: 8px;
+}
+
+.search {
+    color: gray;
+}
+
+.icon input {
+    flex: 1;
+    border: none;
+    background-color: rgb(40, 47, 64);
+    min-width: 0;
+
+}
+
+.header-bttn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-bttn a {
+    text-decoration: none;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header-bttn .signup-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(40, 47, 64);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.signin a:hover {
+    color: rgb(181, 182, 199);
+}
+
+.signup a:hover {
+    border-color: rgb(181, 182, 199);
+    color: rgb(181, 182, 199);
+}
+
+
+.platform,
+.Platform {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* platform-drops */
+.platform-drops {
+    position: absolute;
+    top: 100%;
+    background: #f6f8fa;
+    width: 1100px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    transform: translate(0, 14px);
+    transition: 0.3s ease;
+    margin-top: 0;
+    left: 0;
+    display: none;
+    z-index: 20;
+}
+
+.Platform:hover .platform-drops,
+.platform:hover .platform-drops {
+    display: grid;
+    transform: translate(0, 0);
+}
+
+/* Columns */
+.column {
+    /* flex: 1; */
+}
+
+.column h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 15px;
+}
+
+/* Items */
+.item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.item i {
+    font-size: 22px;
+    color: #57606a;
+    margin-top: 4px;
+}
+
+.item span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+    white-space: nowrap;
+}
+
+.item sup {
+    color: #0969da;
+}
+
+.item p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #57606a;
+    white-space: nowrap;
+}
+
+/* Hover */
+.item:hover p {
+    color: #0969da;
+}
+
+.item:hover span {
+    color: #0969da;
+}
+
+.item:hover i {
+    color: #0969da;
+}
+
+/* View All Features */
+.view {
+    position: absolute;
+    padding: 20px 30px;
+    background-color: rgb(235, 239, 242);
+    width: 100%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    bottom: -60px;
+
+}
+
+.view p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(36, 41, 47);
+}
+
+.view i {
+    font-size: 12px;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* hover */
+.view:hover p {
+    color: #0969da;
+}
+
+.view:hover i {
+    color: #0969da;
+    transform: translateX(4px);
+
+
+}
+
+/* Last column style */
+.last {
+    border-left: 1px solid rgba(128, 128, 128, 0.303);
+    padding-left: 50px;
+}
+
+.last p {
+    margin-bottom: 25px;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+}
+
+.last p:hover {
+    color: #0969da;
+}
+
+
+/* Solution */
+.solution {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* solution-drops */
+.solution-drops {
+    position: absolute;
+    width: 750px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.solution:hover .solution-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN2 */
+.column2 {
+    /* flex: 1; */
+}
+
+.column2 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items2 */
+.item2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+.item2 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+
+}
+
+.item2 i {
+    font-size: 12px;
+    color: #57606a;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: 4px;
+}
+
+
+/* Hover */
+.item2:hover span {
+    color: #0969da;
+}
+
+.item2 a:hover i,
+.item2:hover i {
+    color: #0969da;
+    transform: translateX(4px);
+}
+
+/* View All solutions */
+.view {
+    position: absolute;
+    padding: 20px 30px;
+    background-color: rgb(235, 239, 242);
+    width: 100%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    bottom: -60px;
+
+}
+
+.view p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(36, 41, 47);
+}
+
+.view i {
+    font-size: 12px;
+    /* color: black; */
+
+}
+
+/* hover */
+.view:hover p {
+    color: #0969da;
+}
+
+.view:hover i {
+    color: #0969da;
+    /* transform: translateX(40px); */
+    /* transition: 0.5s ease; */
+}
+
+/* Resource */
+.resources {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* resources-drops */
+.resources-drops {
+    position: absolute;
+    width: 750px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.resources:hover .resources-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN3 */
+.column3 {
+    /* flex: 1; */
+}
+
+.column3 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items3 */
+.item3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+.item3 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+    display: inline-flex;
+    align-items: center;
+}
+
+.item3 i {
+    font-size: 12px;
+    color: #57606a;
+}
+
+.item3 .bi-chevron-right {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+/* Hover */
+.item3:hover span {
+    color: #0969da;
+}
+
+.item3 a:hover .bi-chevron-right,
+.item3:hover .bi-chevron-right {
+    color: #0969da;
+    transform: translateX(4px);
+}
+
+.resource-link-icon {
+    font-size: 14px;
+    margin-left: 6px;
+    display: inline-flex;
+    align-items: center;
+    text-shadow: 0 0 0.35px currentColor;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.item3 a:hover .resource-link-icon,
+.item3:hover .resource-link-icon {
+    color: #0969da;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* View All resources */
+.view {
+    position: absolute;
+    padding: 20px 30px;
+    background-color: rgb(235, 239, 242);
+    width: 100%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    bottom: -60px;
+
+}
+
+.view p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(36, 41, 47);
+}
+
+.view i {
+    font-size: 12px;
+
+}
+
+/* hover */
+.view:hover p {
+    color: #0969da;
+}
+
+.view:hover i {
+    color: #0969da;
+    /* transform: translateX(40px); */
+    /* transition: 0.5s ease; */
+}
+
+
+/* Open Source */
+.open {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* Open-drops */
+.open-drops {
+    position: absolute;
+    width: 750px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.open:hover .open-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN4 */
+.column4 {
+    /* flex: 1; */
+}
+
+.column4 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items4 */
+.item4 {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.item4 i {
+    font-size: 22px;
+    color: #57606a;
+    margin-top: 4px;
+}
+
+
+.item4 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.item4 P {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(36, 41, 47);
+    white-space: nowrap;
+
+}
+
+
+/* Hover */
+.item4:hover span {
+    color: #0969da;
+}
+
+.item4:hover p {
+    color: #0969da;
+
+}
+
+.item4:hover i {
+    color: #0969da;
+}
+
+.item4 .resource-link-icons {
+    font-size: 12px;
+    margin-left: 6px;
+    display: inline-block;
+    line-height: 1;
+    margin-top: 0;
+    text-shadow: 0 0 0.35px currentColor;
+    opacity: 0;
+    transform: translateX(0px);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.item4 a:hover .resource-link-icons,
+.item4:hover .resource-link-icons {
+    color: #0969da;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.enterprise {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* Enterprise-drops */
+.enterprise-drops {
+    position: absolute;
+    width: 700px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.enterprise:hover .enterprise-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN5 */
+.column5 {
+    /* flex: 1; */
+}
+
+.column5 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items5 */
+.item5 {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.item5 i {
+    font-size: 22px;
+    color: #57606a;
+    margin-top: 4px;
+}
+
+
+.item5 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+
+}
+
+.item5 P {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(36, 41, 47);
+    white-space: nowrap;
+
+}
+
+
+/* Hover */
+.item4:hover span,
+.item4:hover p,
+.item5:hover span,
+.item5:hover p,
+.item5:hover i {
+    color: #0969da;
+}
+
+
+.usecase-hero {
+    position: relative;
+    /* overflow: hidden; */
+    background:
+        radial-gradient(circle at 84% 0%, rgba(118, 92, 255, 0.65), transparent 36%),
+        radial-gradient(circle at 58% 12%, rgba(38, 94, 255, 0.28), transparent 32%),
+        linear-gradient(115deg, #02060d 10%, #071122 48%, #171337 100%);
+    min-height: 640px;
+    padding: 84px 24px 96px;
+}
+
+.usecase-hero__inner {
+    width: min(1200px, calc(100% - 96px));
+    margin: 0 auto;
+    color: #f6f8fa;
+}
+
+.usecase-breadcrumb {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 150px;
+    color: #f6f8fa;
+}
+
+.usecase-breadcrumb:hover {
+    text-decoration: underline;
+}
+
+.usecase-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 26px;
+}
+
+.usecase-label span {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 16px;
+    letter-spacing: 0.12em;
+    color: #b6c4d4;
+}
+
+.usecase-label i {
+    width: 10px;
+    height: 12px;
+    display: inline-block;
+    background: #3fb950;
+}
+
+.usecase-hero h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: clamp(4rem, 7vw, 4rem);
+    font-weight: 400;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    color: #f6f8fa;
+    margin-bottom: 28px;
+}
+
+.usecase-description {
+    max-width: 600px;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #c9d1d9;
+    margin-bottom: 42px;
+}
+
+.usecase-actions {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 58px;
+    padding: 0 36px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.primary {
+    background: rgb(35, 134, 54);
+    color: #fff;
+}
+
+.primary:hover {
+    background-color: #2ea043;
+}
+
+.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: #f6f8fa;
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+.secondary:hover {
+    border: 2px solid gray;
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+
+.modern {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin: auto;
+    gap: 30px;
+    padding: 60px;
+    width: 88%;
+
+}
+
+.modern1 {
+    background-color: rgb(22, 26, 33);
+    /* border: 1px solid #afb8c1; */
+    width: 100%;
+    margin-top: 20px;
+    padding: 30px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modern1 .bi-ui-checks-grid,
+.modern1 .bi-shield-check,
+.modern1 .bi-lightning-charge {
+    background-color: rgb(60, 30, 112);
+    padding: 14px 17px;
+    border-radius: 50%;
+    width: 55px;
+    color: rgb(210, 168, 255);
+    font-size: 18px;
+}
+
+.bi-diagram-2 {
+    font-size: 22px;
+    background-color: rgb(60, 30, 112);
+    padding: 12px 15px;
+    border-radius: 50%;
+    width: 55px;
+    color: rgb(210, 168, 255);
+}
+
+.modern1 .bi-chevron-right {
+    font-size: 12px;
+}
+
+.modern1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: white;
+}
+
+.modern1 p {
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 300px;
+    width: 100%;
+    color: rgb(139, 148, 158);
+}
+
+.modern1 a {
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(120, 192, 255);
+}
+
+.modern1 .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+.modern1:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.modern1:hover .bi-chevron-right {
+    display: none;
+}
+
+.modern1:hover .arrow1 {
+    opacity: 1;
+}
+
+.related {
+    margin-top: 80px;
+}
+
+.related h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 3;
+    color: rgb(255, 255, 255);
+    width: 80%;
+    margin: auto;
+
+}
+
+
+.healthcare {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 30px;
+    padding: 60px;
+    width: 88%;
+
+}
+
+.healthcare1 {
+    background-color: rgb(22, 26, 33);
+    /* border: 1px solid #afb8c1; */
+    width: 100%;
+    /* margin-top: 30px; */
+    padding: 30px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.healthcare1 .bi-heart,
+.healthcare1 .bi-stack,
+.healthcare1 .bi-wrench {
+    background-color: rgb(60, 30, 112);
+    padding: 14px 17px;
+    border-radius: 50%;
+    width: 55px;
+    color: rgb(210, 168, 255);
+    font-size: 20px;
+}
+
+.healthcare1 .bi-chevron-right {
+    font-size: 12px;
+}
+
+.healthcare1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: white;
+}
+
+.healthcare1 p {
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 300px;
+    width: 100%;
+    color: rgb(139, 148, 158);
+}
+
+.healthcare1 a {
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(120, 192, 255);
+}
+
+.healthcare1 .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+.healthcare1:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.healthcare1:hover .bi-chevron-right {
+    display: none;
+}
+
+.healthcare1:hover .arrow1 {
+    opacity: 1;
+}
+
+.leaked {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    gap: 20px;
+
+}
+
+.leaked h2 {
+    font-family: "Hubot Sans", "Hubot SansHeaderFallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 2;
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+}
+
+.leaked p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    color: rgb(139, 148, 158);
+    width: 85%;
+}
+
+.getbg {
+    background-color: #57606a11;
+    padding: 80px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.get {
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.314);
+    padding: 90px;
+    width: 90%;
+    margin: auto;
+    background-color: rgb(25, 28, 36);
+}
+
+.get1 {
+    width: 70%;
+    margin: auto;
+
+}
+
+.get1 h3 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 48px;
+    font-weight: 440;
+    line-height: 56.64px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.get1 p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+}
+
+/* BUTTONS  */
+.free-button {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 36px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.primary1 {
+    background: rgb(25, 128, 54);
+    color: #fff;
+}
+
+.primary1:hover {
+    background-color: #2ea44f;
+}
+
+
+.secondary1 {
+    color: white;
+    background-color: rgb(40, 43, 51);
+}
+
+.secondary1:hover {
+    background-color: rgb(25, 28, 36);
+}
+
+
+
+/* FOOTER */
+
+.footer-up {
+    background-color: rgb(13, 17, 23);
+}
+
+.footer {
+    width: min(1300px, calc(100% - 48px));
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    margin: 30px;
+    padding: 80px 0;
+
+}
+
+
+.footer-left img {
+    margin-left: -15px;
+}
+
+
+.footer-left h5 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer-left p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(89, 99, 110);
+    margin-bottom: 20px;
+}
+
+.footer-left button {
+    width: 120px;
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.689);
+    border-radius: 7px;
+}
+
+.footer-left button:hover {
+    border: 2px solid white;
+}
+
+.footer-navs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+
+}
+
+.footer-list li {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2.5;
+    color: rgb(89, 99, 110);
+    list-style: none;
+
+}
+
+.footer-list li>a:hover {
+    text-decoration: underline;
+    color: rgb(9, 105, 218);
+}
+
+.footer-list a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(89, 99, 110);
+    text-decoration: none;
+}
+
+.footer-in li a {
+    text-decoration: none;
+}
+
+.footer-in li {
+    list-style: none;
+}
+
+.sec {
+    background-color: rgb(21, 28, 36);
+}
+
+.footer-down {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    margin: auto;
+    width: min(1700px, calc(100% - 48px));
+}
+
+.footer-in {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+
+}
+
+.footer-in span {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(145, 152, 161);
+}
+
+.footer-in a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(145, 152, 161);
+
+}
+
+.footer-in a:hover {
+    text-decoration: underline;
+    color: rgb(9, 105, 218);
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bi-linkedin,
+.bi-instagram,
+.bi-youtube,
+.bi-twitter-x,
+.bi-tiktok,
+.bi-twitch,
+.gitt {
+    color: #57606a;
+    font-size: 16px;
+    /* background-color: #57606a; */
+
+
+}
+
+.bi-linkedin:hover,
+.bi-instagram:hover,
+.bi-youtube:hover,
+.bi-twitter-x:hover,
+.bi-tiktok:hover,
+.bi-twitch:hover,
+.gitt:hover {
+    color: gray;
+}
+
+.footer-select {
+    padding: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(89, 99, 110);
+    align-items: center;
+    display: flex;
+
+}
+
+.footer-select .bi-globe {
+    font-size: 16px;
+    color: rgb(89, 99, 110);
+}
+
+select {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+    color: rgb(89, 99, 110);
+    width: 80px;
+
+}
+
+.eng {
+    background-color: black;
+    color: #f6f8fa;
+}
+
+
+
+
+@media (max-width: 1248px) {
+    header {
+        width: calc(100% - 32px);
+        padding: 16px 0;
+        gap: 20px;
+    }
+
+    .header-left {
+        gap: 22px;
+        min-width: 0;
+        flex: 1;
+    }
+
+    nav ul {
+        gap: 28px;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .header-right {
+        gap: 16px;
+        flex-shrink: 0;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .iconsearch {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 8px;
+        background-color: rgb(33, 38, 45);
+        border-color: rgb(87, 96, 106);
+    }
+
+    .header-bttn {
+        gap: 14px;
+    }
+
+    .header-bttn a {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .header-bttn .signup-btn {
+        padding: 10px 16px;
+        background-color: transparent;
+        border-radius: 8px;
+    }
+
+    .usecase-hero {
+        min-height: 560px;
+        padding: 72px 20px 80px;
+    }
+
+    .usecase-hero__inner {
+        width: calc(100% - 40px);
+    }
+
+    .usecase-breadcrumb {
+        margin-bottom: 110px;
+    }
+
+    .usecase-description {
+        max-width: 720px;
+        font-size: 18px;
+    }
+
+    .modern {
+        width: calc(100% - 32px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+        padding: 48px 0 60px;
+    }
+
+    .modern1 {
+        margin-top: 0;
+        min-height: 360px;
+        padding: 32px;
+        gap: 22px;
+    }
+
+    .modern1 p {
+        max-width: none;
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .modern1 a {
+        margin-top: auto;
+        font-size: 17px;
+    }
+
+    .related {
+        margin-top: 84px;
+    }
+
+    .related h1 {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        font-size: 50px;
+        line-height: 1.15;
+    }
+
+    .healthcare {
+        width: calc(100% - 32px);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 30px;
+        padding: 48px 0 0;
+    }
+
+    .healthcare1 {
+        min-height: 360px;
+        padding: 32px;
+        gap: 22px;
+    }
+
+    .healthcare1 p {
+        max-width: none;
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .healthcare1 a {
+        margin-top: auto;
+        font-size: 17px;
+    }
+
+    .leaked {
+        width: calc(100% - 32px);
+    }
+
+    .getbg {
+        padding: 80px 0 0;
+    }
+
+    .get {
+        width: calc(100% - 32px);
+        padding: 90px 56px;
+    }
+
+    .footer {
+        width: calc(100% - 32px);
+        flex-direction: column;
+        gap: 32px;
+        margin: 24px auto;
+        padding: 48px 0;
+    }
+
+    .footer-navs {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .footer-down {
+        width: calc(100% - 32px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 18px 0;
+    }
+
+    .footer-in {
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width:1024px) {
+    header {
+        width: calc(100% - 32px);
+        padding: 14px 0;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-toggle i {
+        font-size: 28px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .header-left {
+        gap: 16px;
+        flex: 0 0 auto;
+    }
+
+    .header-right {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .iconsearch {
+        display: none;
+    }
+
+    .header-bttn {
+        gap: 12px;
+    }
+
+    .header-bttn .signup-btn {
+        padding: 10px 16px;
+        background-color: transparent;
+        border-radius: 8px;
+    }
+
+    .brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .git {
+        font-size: 2rem;
+    }
+
+    .signin a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 34px;
+        padding: 0 16px;
+        border: 1px solid rgba(240, 246, 252, 0.9);
+        border-radius: 8px;
+    }
+
+    .signup {
+        display: none;
+    }
+
+    .usecase-hero {
+        min-height: 560px;
+        padding: 72px 20px 80px;
+    }
+
+    .usecase-hero__inner {
+        width: calc(100% - 40px);
+    }
+
+    .usecase-breadcrumb {
+        margin-bottom: 110px;
+    }
+
+    .usecase-description {
+        max-width: 720px;
+        font-size: 18px;
+    }
+
+    .modern {
+        width: calc(100% - 32px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        padding: 48px 0 56px;
+    }
+
+    .modern1 {
+        margin-top: 0;
+        min-height: 340px;
+        padding: 30px;
+        gap: 22px;
+    }
+
+    .modern1 p {
+        max-width: none;
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .modern1 a {
+        margin-top: auto;
+        font-size: 17px;
+    }
+
+    .related {
+        margin-top: 88px;
+    }
+
+    .related h1 {
+        width: calc(100% - 32px);
+        margin: 0 auto;
+        font-size: 42px;
+        line-height: 1.12;
+    }
+
+    .healthcare {
+        width: calc(100% - 32px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+        padding: 44px 0 0;
+    }
+
+    .healthcare1 {
+        min-height: 340px;
+        padding: 30px;
+        gap: 22px;
+    }
+
+    .healthcare1 p {
+        max-width: none;
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .healthcare1 a {
+        margin-top: auto;
+        font-size: 17px;
+    }
+
+    .leaked {
+        display: grid;
+        width: calc(100% - 32px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px 44px;
+        padding: 52px 0 24px;
+    }
+
+    .leaked h2 {
+        font-size: 56px;
+        line-height: 1;
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    .leaked p {
+        width: 100%;
+        max-width: 480px;
+        font-size: 17px;
+        line-height: 1.45;
+    }
+
+    .getbg {
+        padding: 64px 0 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        background-color: transparent;
+    }
+
+    .get {
+        width: calc(100% - 64px);
+        padding: 110px 40px 100px;
+    }
+
+    .get1 {
+        width: 100%;
+        max-width: 980px;
+    }
+
+    .get1 h3 {
+        font-size: 52px;
+        line-height: 1.05;
+        margin-bottom: 28px;
+    }
+
+    .get1 p {
+        max-width: 920px;
+        margin: 0 auto 40px;
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
+    .free-button {
+        gap: 18px;
+    }
+
+    .free-button .btn {
+        min-width: auto;
+        min-height: 48px;
+        padding: 0 36px;
+        font-size: 18px;
+    }
+
+    .footer {
+        width: calc(100% - 32px);
+        flex-direction: column;
+        gap: 32px;
+        margin: 24px auto;
+        padding: 48px 0;
+    }
+
+    .footer-navs {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .footer-down {
+        width: calc(100% - 32px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding: 18px 0;
+    }
+
+    .footer-in {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        width: calc(100% - 24px);
+        padding: 12px 0;
+    }
+
+    .header-bttn a {
+        font-size: 15px;
+    }
+
+    .usecase-hero {
+        min-height: auto;
+        padding: 56px 16px 64px;
+    }
+
+    .usecase-hero__inner {
+        width: calc(100% - 16px);
+    }
+
+    .usecase-breadcrumb {
+        font-size: 16px;
+        margin-bottom: 72px;
+    }
+
+    .usecase-label {
+        margin-bottom: 18px;
+    }
+
+    .usecase-label span {
+        font-size: 16px;
+    }
+
+    .usecase-description {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    .usecase-actions {
+        flex-wrap: nowrap;
+        gap: 12px;
+    }
+
+    .btn {
+        width: auto;
+        min-height: 48px;
+        padding: 0 36px;
+        font-size: 18px;
+    }
+
+    .modern {
+        width: calc(100% - 24px);
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 32px 0 44px;
+    }
+
+    .modern1 {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .modern1 p {
+        max-width: none;
+        width: 100%;
+    }
+
+    .related h1 {
+        width: calc(100% - 24px);
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    .healthcare {
+        width: calc(100% - 24px);
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 32px 0 44px;
+    }
+
+    .healthcare1 {
+        min-height: auto;
+        padding: 22px;
+        border-radius: 18px;
+        gap: 20px;
+    }
+
+    .healthcare1 p {
+        max-width: none;
+        width: 100%;
+    }
+
+    .leaked {
+        width: calc(100% - 24px);
+        grid-template-columns: 1fr;
+        gap: 26px;
+        padding: 20px 0 8px;
+    }
+
+    .leaked h2 {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .leaked p {
+        max-width: none;
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .footer {
+        width: calc(100% - 24px);
+        gap: 24px;
+        padding: 36px 0;
+    }
+
+    .footer-navs {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .footer-icons {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+}
+
+@media (max-width: 545px) {
+    .getbg {
+        padding: 48px 0 0;
+    }
+
+    .get {
+        width: calc(100% - 24px);
+        padding: 84px 18px 78px;
+    }
+
+    .get1 {
+        width: 100%;
+        max-width: none;
+    }
+
+    .get1 h3 {
+        font-size: 42px;
+        line-height: 1.08;
+        margin-bottom: 22px;
+    }
+
+    .get1 p {
+        max-width: none;
+        margin: 0 auto 34px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .free-button {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .free-button .btn {
+        min-width: 0;
+        min-height: 48px;
+        padding: 0 36px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        width: calc(100% - 24px);
+        gap: 12px;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .header-bttn {
+        gap: 10px;
+    }
+
+    .header-bttn a {
+        font-size: 14px;
+    }
+
+    .iconsearch {
+        width: 36px;
+        height: 36px;
+    }
+
+    .usecase-hero {
+        padding: 44px 12px 52px;
+    }
+
+    .usecase-hero__inner {
+        width: 100%;
+    }
+
+    .usecase-breadcrumb {
+        margin-bottom: 56px;
+    }
+
+    .usecase-label span {
+        font-size: 14px;
+    }
+
+    .usecase-label i {
+        width: 8px;
+        height: 16px;
+    }
+
+    .usecase-hero h1 {
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+    .usecase-description {
+        font-size: 16px;
+    }
+
+    .btn {
+        min-height: 52px;
+        padding: 0 24px;
+        font-size: 16px;
+    }
+
+    .modern {
+        width: calc(100% - 16px);
+        padding: 24px 0 36px;
+    }
+
+    .modern1 {
+        padding: 18px;
+    }
+
+    .modern1 h1 {
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .modern1 p,
+    .modern1 a {
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .footer,
+    .footer-down {
+        width: calc(100% - 16px);
+    }
+
+    .footer {
+        padding: 28px 0;
+    }
+
+    .footer-select {
+        padding: 8px 0;
+    }
+}
+
+@media (max-width: 410px) {
+    .usecase-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .usecase-actions .btn {
+        width: auto;
+        min-width: 208px;
+        min-height: 48px;
+        padding: 0 22px;
+        font-size: 16px;
+    }
+
+    .getbg {
+        padding: 40px 0 0;
+    }
+
+    .get {
+        width: calc(100% - 24px);
+        padding: 88px 14px 80px;
+    }
+
+    .get1 h3 {
+        font-size: 32px;
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    .get1 p {
+        margin: 0 auto 30px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .free-button {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .free-button .btn {
+        width: 100%;
+        min-height: 50px;
+        padding: 0 20px;
+        font-size: 16px;
+    }
+}

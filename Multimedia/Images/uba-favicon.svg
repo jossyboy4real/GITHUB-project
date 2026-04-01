@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16331f"/>
+      <stop offset="100%" stop-color="#1f462b"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+
+  <!-- UBA-inspired red mark -->
+  <g transform="translate(17 10)">
+    <polygon points="5,5 20,5 12,44" fill="#d10f1f"/>
+    <polygon points="22,5 27,5 16,44 11,44" fill="#b50c1a"/>
+  </g>
+</svg>

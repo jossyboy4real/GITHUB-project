@@ -1,0 +1,3388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+}
+
+.wrapper {
+    background-color: rgb(37, 41, 46);
+
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    width: 95%;
+    margin: auto;
+    padding: 15px;
+    background-color: rgb(37, 41, 46);
+
+}
+
+.header-left {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.git {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+}
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.menu-toggle i {
+    font-size: 20px;
+    line-height: 1;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 400;
+}
+
+nav a:hover {
+    color: gray;
+
+}
+
+
+nav .bi-chevron-down {
+    font-size: 12px;
+    color: gray;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.Platform:hover .bi-chevron-down,
+.solution:hover .bi-chevron-down,
+.resources:hover .bi-chevron-down,
+.open:hover .bi-chevron-down,
+.enterprise:hover .bi-chevron-down {
+    transform: translateY(2px);
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.iconsearch {
+    border: 1px solid gray;
+    border-radius: 4px;
+    padding: 4px 6px;
+    background-color: #57606a88;
+    display: none;
+}
+
+.search1 {
+    color: white;
+}
+
+.icon {
+    display: flex;
+    padding: 7px 7px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    color: white;
+    width: 350px;
+    border: 1px solid gray;
+    background-color: rgb(40, 47, 64);
+    border-radius: 8px;
+}
+
+.search {
+    color: gray;
+}
+
+.icon input {
+    flex: 1;
+    border: none;
+    background-color: rgb(40, 47, 64);
+    min-width: 0;
+
+}
+
+.header-bttn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-bttn a {
+    text-decoration: none;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.header-bttn .signup-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgb(40, 47, 64);
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+}
+
+.signin a:hover {
+    color: rgb(181, 182, 199);
+}
+
+.signup a:hover {
+    border-color: rgb(181, 182, 199);
+    color: rgb(181, 182, 199);
+}
+
+
+.platform,
+.Platform {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* platform-drops */
+.platform-drops {
+    position: absolute;
+    top: 100%;
+    background: #f6f8fa;
+    width: 1100px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    transform: translate(0, 14px);
+    transition: 0.3s ease;
+    margin-top: 0;
+    left: 0;
+    display: none;
+    z-index: 20;
+}
+
+.Platform:hover .platform-drops,
+.platform:hover .platform-drops {
+    display: grid;
+    transform: translate(0, 0);
+}
+
+/* Columns */
+.column {
+    /* flex: 1; */
+}
+
+.column h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 15px;
+}
+
+/* Items */
+.item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.item i {
+    font-size: 22px;
+    color: #57606a;
+    margin-top: 4px;
+}
+
+.item span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+    white-space: nowrap;
+}
+
+.item sup {
+    color: #0969da;
+}
+
+.item p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #57606a;
+    white-space: nowrap;
+}
+
+/* Hover */
+.item:hover p {
+    color: #0969da;
+}
+
+.item:hover span {
+    color: #0969da;
+}
+
+.item:hover i {
+    color: #0969da;
+}
+
+/* View All Features */
+.view {
+    position: absolute;
+    padding: 20px 30px;
+    background-color: rgb(235, 239, 242);
+    width: 100%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    bottom: -60px;
+
+}
+
+.view p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(36, 41, 47);
+}
+
+.view i {
+    font-size: 12px;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* hover */
+.view:hover p {
+    color: #0969da;
+}
+
+.view:hover i {
+    color: #0969da;
+    transform: translateX(4px);
+
+
+}
+
+/* Last column style */
+.last {
+    border-left: 1px solid rgba(128, 128, 128, 0.303);
+    padding-left: 50px;
+}
+
+.last p {
+    margin-bottom: 25px;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+}
+
+.last p:hover {
+    color: #0969da;
+}
+
+
+/* Solution */
+.solution {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* solution-drops */
+.solution-drops {
+    position: absolute;
+    width: 750px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.solution:hover .solution-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN2 */
+.column2 {
+    /* flex: 1; */
+}
+
+.column2 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items2 */
+.item2 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+.item2 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+
+}
+
+.item2 i {
+    font-size: 12px;
+    color: #57606a;
+    display: inline-block;
+    transition: transform 0.2s ease, color 0.2s ease;
+    margin-left: 4px;
+}
+
+
+/* Hover */
+.item2:hover span {
+    color: #0969da;
+}
+
+.item2 a:hover i,
+.item2:hover i {
+    color: #0969da;
+    transform: translateX(4px);
+}
+
+/* View All solutions */
+.view {
+    position: absolute;
+    padding: 20px 30px;
+    background-color: rgb(235, 239, 242);
+    width: 100%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    bottom: -60px;
+
+}
+
+.view p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(36, 41, 47);
+}
+
+.view i {
+    font-size: 12px;
+    /* color: black; */
+
+}
+
+/* hover */
+.view:hover p {
+    color: #0969da;
+}
+
+.view:hover i {
+    color: #0969da;
+    /* transform: translateX(40px); */
+    /* transition: 0.5s ease; */
+}
+
+/* Resource */
+.resources {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* resources-drops */
+.resources-drops {
+    position: absolute;
+    width: 750px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.resources:hover .resources-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN3 */
+.column3 {
+    /* flex: 1; */
+}
+
+.column3 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items3 */
+.item3 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+
+.item3 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+    display: inline-flex;
+    align-items: center;
+}
+
+.item3 i {
+    font-size: 12px;
+    color: #57606a;
+}
+
+.item3 .bi-chevron-right {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 4px;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+
+/* Hover */
+.item3:hover span {
+    color: #0969da;
+}
+
+.item3 a:hover .bi-chevron-right,
+.item3:hover .bi-chevron-right {
+    color: #0969da;
+    transform: translateX(4px);
+}
+
+.resource-link-icon {
+    font-size: 14px;
+    margin-left: 6px;
+    display: inline-flex;
+    align-items: center;
+    text-shadow: 0 0 0.35px currentColor;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.item3 a:hover .resource-link-icon,
+.item3:hover .resource-link-icon {
+    color: #0969da;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* View All resources */
+.view {
+    position: absolute;
+    padding: 20px 30px;
+    background-color: rgb(235, 239, 242);
+    width: 100%;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    bottom: -60px;
+
+}
+
+.view p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(36, 41, 47);
+}
+
+.view i {
+    font-size: 12px;
+
+}
+
+/* hover */
+.view:hover p {
+    color: #0969da;
+}
+
+.view:hover i {
+    color: #0969da;
+    /* transform: translateX(40px); */
+    /* transition: 0.5s ease; */
+}
+
+
+/* Open Source */
+.open {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* Open-drops */
+.open-drops {
+    position: absolute;
+    width: 750px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.open:hover .open-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN4 */
+.column4 {
+    /* flex: 1; */
+}
+
+.column4 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items4 */
+.item4 {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.item4 i {
+    font-size: 22px;
+    color: #57606a;
+    margin-top: 4px;
+}
+
+
+.item4 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.item4 P {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(36, 41, 47);
+    white-space: nowrap;
+
+}
+
+
+/* Hover */
+.item4:hover span {
+    color: #0969da;
+}
+
+.item4:hover p {
+    color: #0969da;
+
+}
+
+.item4:hover i {
+    color: #0969da;
+}
+
+.item4 .resource-link-icons {
+    font-size: 12px;
+    margin-left: 6px;
+    display: inline-block;
+    line-height: 1;
+    margin-top: 0;
+    text-shadow: 0 0 0.35px currentColor;
+    opacity: 0;
+    transform: translateX(0px);
+    transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.item4 a:hover .resource-link-icons,
+.item4:hover .resource-link-icons {
+    color: #0969da;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.enterprise {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: -18px;
+}
+
+
+/* Enterprise-drops */
+.enterprise-drops {
+    position: absolute;
+    width: 700px;
+    top: 100%;
+    background: #f6f8fa;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    border-radius: 7px;
+    transform: translate(-60px, 14px);
+    transition: 0.3s ease;
+    left: 50px;
+    display: none;
+    z-index: 20;
+}
+
+.enterprise:hover .enterprise-drops {
+    display: grid;
+    transform: translate(-60px, 0);
+}
+
+/* CoLUMN5 */
+.column5 {
+    /* flex: 1; */
+}
+
+.column5 h4 {
+    font-family: "Mona Sans Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 20px;
+}
+
+/* Items5 */
+.item5 {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.item5 i {
+    font-size: 22px;
+    color: #57606a;
+    margin-top: 4px;
+}
+
+
+.item5 span {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(36, 41, 47);
+
+}
+
+.item5 P {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(36, 41, 47);
+    white-space: nowrap;
+
+}
+
+
+/* Hover */
+.item4:hover span,
+.item4:hover p,
+.item5:hover span,
+.item5:hover p,
+.item5:hover i {
+    color: #0969da;
+}
+
+
+
+.hero {
+    min-height: 600px;
+    background: url("../Multimedia/Images/merge-lines.webp") center / cover; 
+    background-color: black;
+}
+
+
+/* CONTENT ON TOP */
+.content {
+    width: min(1040px, calc(100% - 48px));
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 104px 0 120px;
+}
+
+.content h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 64px;
+    font-weight: 440;
+    line-height: 1.04;
+    color: rgb(255, 255, 255);
+    margin-bottom: 28px;
+    max-width: 980px;
+    letter-spacing: -0.04em;
+}
+
+.content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 38px;
+    color: rgb(177, 186, 196);
+    max-width: 660px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    min-height: 50px;
+    width: 180px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary {
+    background: rgb(25, 128, 54);
+    color: #fff;
+}
+
+.primary:hover {
+    background-color: #2ea44f;
+}
+
+.secondary {
+    border: 1px solid rgba(240, 246, 252, 0.18);
+    color: #fff;
+    background-color: rgba(15, 20, 26, 0.16);
+}
+
+.secondary:hover {
+    border: 1px solid rgba(240, 246, 252, 0.32);
+}
+
+
+.just {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    margin-top: -120px;
+    padding-top: 96px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.justs {
+    text-align: center;
+}
+
+.justs h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 40px;
+    font-weight: 560;
+    line-height: 48px;
+    color: rgb(36, 41, 47);
+    width: 100%;
+    max-width: 400px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 30px;
+    padding: 60px;
+    width: 88%;
+
+}
+
+.card1 {
+    background-color: white;
+    border: 1px solid #afb8c1;
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 22px;
+}
+
+.card1 .bi-globe,
+.card1 .bi-stack,
+.card1 .bi-star {
+    background-color: #fbefff;
+    padding: 10px 12px;
+    border-radius: 50%;
+    color: #8250df;
+    font-size: 20px;
+    line-height: 5;
+}
+
+.card1 .bi-chevron-right {
+    font-size: 12px;
+}
+
+.card1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 3;
+    color: rgb(36, 41, 47);
+}
+
+.card1 p {
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 300px;
+    width: 100%;
+    color: rgb(31, 35, 40);
+    margin-bottom: 20px;
+}
+
+.card1 a {
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(5, 81, 173);
+}
+
+.card1 .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+.card1:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.card1:hover .bi-chevron-right {
+    display: none;
+}
+
+.card1:hover .arrow1 {
+    opacity: 1;
+}
+
+.grade {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    width: 80%;
+    background-color: #57606a0c;
+    margin: auto;
+    border-radius: 30px;
+}
+
+
+.grade1 .bi-globe {
+    background-color: #fbefff;
+    padding: 10px 12px;
+    border-radius: 50%;
+    color: #8250df;
+    font-size: 30px;
+}
+
+.grade1 {
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 35px;
+    line-height: 3.5;
+
+}
+
+.grade1 h2 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 44.2px;
+    color: rgb(36, 41, 47);
+    width: 400px;
+    margin-bottom: 200px;
+}
+
+.grade1>a .bi-chevron-right {
+    font-size: 12px;
+}
+
+.grade1>a .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+.grade1 a:hover .bi-chevron-right {
+    display: none;
+}
+
+.grade1 a:hover .arrow1 {
+    opacity: 1;
+}
+
+.grade img {
+    width: 650px;
+    /* height: auto; */
+    padding: 40px;
+}
+
+.menu-links1 {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(5, 80, 174);
+    text-decoration: none;
+}
+
+.menu-links1.i {
+    transition: 0.3s;
+}
+
+.menu-links1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: rgb(5, 80, 174);
+    transition: 0.3s ease;
+}
+
+.menu-links1:hover::after {
+    width: 90%;
+    left: 2px;
+}
+
+
+.solvebg {
+     background-color: #57606a0c;
+     margin-top: 120px;
+       border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.solve {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    
+  
+}
+
+.solve1 {
+    text-align: center;
+    line-height: 8;
+}
+
+.solve1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 40px;
+    font-weight: 560;
+    line-height: 48px;
+    color: rgb(36, 41, 47);
+    width: 100%;
+    max-width: 500px;
+}
+
+
+.solve1>a .bi-chevron-right {
+    font-size: 12px;
+}
+
+.solve1>a .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+.solve1 a:hover .bi-chevron-right {
+    display: none;
+}
+
+.solve1 a:hover .arrow1 {
+    opacity: 1;
+}
+
+.healthcare {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 30px;
+    padding: 60px;
+    width: 88%;
+
+}
+
+.healthcare1 {
+    background-color: white;
+    /* border: 1px solid #afb8c1; */
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.healthcare1 .bi-heart,
+.healthcare1 .bi-stack,
+.healthcare1 .bi-wrench {
+    background-color: #fbefff;
+    padding: 12px;
+    border-radius: 50%;
+    width: 45px;
+    color: #8250df;
+    font-size: 18px;
+}
+
+.healthcare1 .bi-chevron-right {
+    font-size: 12px;
+}
+
+.healthcare1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(36, 41, 47);
+}
+
+.healthcare1 p {
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 300px;
+    width: 100%;
+    color: rgb(31, 35, 40);
+}
+
+.healthcare1 a {
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(5, 81, 173);
+}
+
+.healthcare1 .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+.healthcare1:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.healthcare1:hover .bi-chevron-right {
+    display: none;
+}
+
+.healthcare1:hover .arrow1 {
+    opacity: 1;
+}
+
+
+
+.want {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-top: 150px;
+}
+
+.want1 {
+    text-align: center;
+    line-height: 8;
+}
+
+.want1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 40px;
+    font-weight: 560;
+    line-height: 48px;
+    color: rgb(36, 41, 47);
+    width: 100%;
+    max-width: 470px;
+}
+
+.want1 a {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(5, 80, 174);
+    text-decoration: none;
+}
+
+.want1 a .bi-chevron-right {
+    font-size: 12px;
+}
+
+.want1 a .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+.want1 a:hover .bi-chevron-right {
+    display: none;
+}
+
+.want1 a:hover .arrow1 {
+    opacity: 1;
+}
+
+.modern {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 30px;
+    padding: 60px;
+    width: 88%;
+
+}
+
+.modern1 {
+    background-color: white;
+    border: 1px solid #afb8c1;
+    width: 100%;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modern1 .bi-ui-checks-grid,
+.modern1 .bi-shield-check,
+.modern1 .bi-lightning-charge {
+    background-color: #fbefff;
+    padding: 13px;
+    border-radius: 50%;
+    width: 45px;
+    color: #8250df;
+    font-size: 16px;
+}
+
+.modern1 .bi-chevron-right {
+    font-size: 12px;
+}
+
+.modern1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(36, 41, 47);
+}
+
+.modern1 p {
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 300px;
+    width: 100%;
+    color: rgb(31, 35, 40);
+}
+
+.modern1 a {
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(5, 81, 173);
+}
+
+.modern1 .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+.modern1:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.modern1:hover .bi-chevron-right {
+    display: none;
+}
+
+.modern1:hover .arrow1 {
+    opacity: 1;
+}
+
+
+
+
+.adopt {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-top: 150px;
+
+    /* border-top-left-radius: 32px; */
+    /* border-top-right-radius: 50px; */
+}
+
+.adopt1 {
+    text-align: center;
+    line-height: 8;
+    width: 100%;
+    margin: auto;
+
+}
+
+.adopt1 h1 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 40px;
+    font-weight: 560;
+    line-height: 48px;
+    color: rgb(36, 41, 47);
+    /* border: 1px solid black; */
+
+}
+
+.menu-links {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(5, 80, 174);
+    text-decoration: none;
+}
+
+.menu-links.i {
+    transition: 0.3s;
+}
+
+.menu-links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: rgb(5, 80, 174);
+    transition: 0.3s ease;
+}
+
+.menu-links:hover::after {
+    width: 85%;
+    left: 3px;
+}
+
+
+.adopt1 a .bi-chevron-right {
+    font-size: 12px;
+}
+
+.adopt1 a .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+
+.adopt1 a:hover .bi-chevron-right {
+    display: none;
+}
+
+.adopt1 a:hover .arrow1 {
+    opacity: 1;
+}
+
+
+.software {
+    margin: auto;
+    width: 80%;
+    /* border: 1px solid black; */
+
+}
+
+.software-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+.software1 {
+    margin-top: 50px;
+    border-radius: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.software1 img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 7px;
+}
+
+
+.software1 .bi-chevron-right {
+    font-size: 12px;
+}
+
+
+.software1 p {
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 20px;
+    font-weight: 500;
+    width: 83%;
+    color: rgb(31, 35, 40);
+}
+
+.software1 a {
+    text-decoration: none;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgb(5, 81, 173);
+}
+
+.software1 .arrow1 {
+    font-size: 20px;
+    opacity: 0;
+}
+
+/* HOVERS */
+.software1:hover {
+    transform: scale(1.03);
+    transition: 0.3s ease;
+}
+
+.software1:hover .bi-chevron-right {
+    display: none;
+}
+
+.software1:hover .arrow1 {
+    opacity: 1;
+}
+
+.getbg {
+    background-color: #57606a11;
+    padding: 80px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.get {
+    text-align: center;
+    border: 1px solid rgba(128, 128, 128, 0.314);
+    padding: 90px;
+    width: 90%;
+    margin: auto;
+}
+
+.get1 {
+    width: 70%;
+    margin: auto;
+
+}
+
+.get1 h3 {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 48px;
+    font-weight: 440;
+    line-height: 56.64px;
+    color: rgb(36, 41, 47);
+    margin-bottom: 20px;
+}
+
+.get1 p {
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: rgb(87, 96, 106);
+    margin-bottom: 30px;
+}
+
+/* BUTTONS  */
+.free-button {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 13px 24px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Mona Sans", MonaSansFallback, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.primary1 {
+    background: rgb(25, 128, 54);
+    color: #fff;
+}
+
+.primary1:hover {
+    background-color: #2ea44f;
+}
+
+
+.secondary1 {
+    border: 1px solid #c9d1d9;
+    color: rgb(36, 41, 47);
+    background-color: rgba(128, 128, 128, 0.168);
+}
+
+.secondary1:hover {
+    background-color: rgba(211, 211, 211, 0.359);
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    width: 79%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    border: 1px solid white;
+    margin: auto;
+    padding: 80px 0;
+}
+
+
+.footer-left h5 {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: rgb(31, 35, 40);
+    margin-top: 30px;
+}
+
+.footer-left p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: rgb(89, 99, 110);
+    margin-bottom: 20px;
+}
+
+.footer-left button {
+    width: 130px;
+    padding: 15px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    color: rgb(31, 35, 40);
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.689);
+    border-radius: 7px;
+}
+
+.footer-left button:hover {
+    border: 2px solid rgb(31, 35, 40);
+}
+
+.footer-navs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+
+}
+
+.footer-list li {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2.5;
+    color: rgb(89, 99, 110);
+    list-style: none;
+
+}
+
+.footer-list li>a:hover {
+    text-decoration: underline;
+    color: rgb(9, 105, 218);
+}
+
+.footer-list a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    /* line-height: 17.5px; */
+    color: rgb(89, 99, 110);
+    text-decoration: none;
+}
+
+.footer-in li a {
+    text-decoration: none;
+}
+
+.footer-in li {
+    list-style: none;
+}
+
+.sec {
+    background-color: rgb(245, 247, 250);
+}
+
+.footer-down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    width: 79%;
+    margin: auto;
+    border: 1px solid white;
+}
+
+.footer-in {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.footer-in span {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(145, 152, 161);
+}
+
+.footer-in a {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    color: rgb(145, 152, 161);
+
+}
+
+.footer-in a:hover {
+    text-decoration: underline;
+    color: rgb(9, 105, 218);
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.bi-linkedin,
+.bi-instagram,
+.bi-youtube,
+.bi-twitter-x,
+.bi-tiktok,
+.bi-twitch,
+.gitt {
+    color: #57606a;
+    font-size: 16px;
+    /* background-color: #57606a; */
+
+
+}
+
+.bi-linkedin:hover,
+.bi-instagram:hover,
+.bi-youtube:hover,
+.bi-twitter-x:hover,
+.bi-tiktok:hover,
+.bi-twitch:hover,
+.gitt:hover {
+    color: gray;
+}
+
+.footer-select {
+    padding: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(145, 152, 161);
+    align-items: center;
+    display: flex;
+
+}
+
+.footer-select .bi-globe {
+    font-size: 16px;
+    color: rgb(89, 99, 110);
+}
+
+select {
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+    width: 80px;
+
+}
+
+@media(max-width:1248px) {
+    header {
+        width: 100%;
+        padding: 16px 32px;
+        gap: 20px;
+    }
+
+    .header-left {
+        gap: 22px;
+        min-width: 0;
+        flex: 1;
+    }
+
+    nav ul {
+        gap: 28px;
+        flex-wrap: nowrap;
+    }
+
+    nav a {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .header-right {
+        gap: 16px;
+        flex-shrink: 0;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .iconsearch {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border-radius: 8px;
+        background-color: rgb(33, 38, 45);
+        border-color: rgb(87, 96, 106);
+    }
+
+    .header-bttn {
+        gap: 14px;
+    }
+
+    .header-bttn a {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .header-bttn .signup-btn {
+        padding: 10px 16px;
+        background-color: transparent;
+        border-radius: 8px;
+    }
+
+    .hero {
+        min-height: 560px;
+    }
+    
+
+    .content {
+        width: calc(100% - 32px);
+        max-width: 980px;
+        padding: 100px 0 90px;
+    }
+
+    .content h1 {
+        max-width: 900px;
+        font-size: 56px;
+        line-height: 1.05;
+        margin-bottom: 24px;
+    }
+
+    .content p {
+        max-width: 720px;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 36px;
+
+    }
+
+    .buttons {
+        gap: 20px;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .btn {
+        min-height: 48px;
+        width: 180px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        border-radius: 10px;
+    }
+
+    .just {
+        width: 100%;
+        margin: -32px auto 0;
+        padding-top: 88px;
+    }
+
+    .justs h1 {
+        max-width: 420px;
+        font-size: 46px;
+        font-weight: 400;
+        line-height: 1.08;
+    }
+
+    .cards {
+        width: calc(100% - 96px);
+        gap: 24px;
+        padding: 48px 0 72px;
+    }
+
+    .card1 {
+        margin-top: 32px;
+        padding: 28px 26px 30px;
+        border-radius: 24px;
+    }
+
+    .card1 h1 {
+        font-size: 18px;
+        line-height: 2.4;
+    }
+
+    .card1 p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .healthcare {
+        width: calc(100% - 96px);
+        gap: 24px;
+        padding: 48px 0 72px;
+    }
+
+    .modern {
+        width: calc(100% - 96px);
+        gap: 24px;
+        padding: 48px 0 72px;
+    }
+
+    .grade {
+        width: calc(100% - 96px);
+        display: grid;
+        grid-template-columns: minmax(0, 1.05fr) minmax(420px, 0.9fr);
+        gap: 28px;
+        align-items: center;
+        padding: 22px 24px 22px 40px;
+        border-radius: 32px;
+    }
+
+    .grade1 {
+        padding: 18px 12px 18px 0;
+        line-height: normal;
+    }
+
+    .grade1 .bi-globe {
+        font-size: 28px;
+        margin-bottom: 44px;
+    }
+
+    .grade1 h2 {
+        width: 100%;
+        max-width: 520px;
+        font-size: 40px;
+        line-height: 1.15;
+        margin-bottom: 152px;
+    }
+
+    .grade > div:last-child {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .grade img {
+        width: min(560px, 100%);
+        max-width: 560px;
+        padding: 0;
+        border-radius: 22px;
+        align-self: center;
+    }
+
+    .menu-links1 {
+        font-size: 16px;
+    }
+
+    .adopt {
+        padding-top: 128px;
+    }
+
+    .adopt1 {
+        line-height: 1;
+    }
+
+    .adopt1 h1 {
+        font-size: 40px;
+        line-height: 1.2;
+        margin-bottom: 28px;
+    }
+
+    .software {
+        width: calc(100% - 96px);
+    }
+
+    .software-con {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 38px;
+        padding: 54px 0 72px;
+    }
+
+    .software1 {
+        margin-top: 0;
+        gap: 26px;
+    }
+
+    .software1 img {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 18px;
+    }
+
+    .software1 p {
+        display: none;
+    }
+
+    .software1 a {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .getbg {
+        padding: 72px 24px 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .get {
+        width: calc(100% - 96px);
+        padding: 92px 40px 120px;
+    }
+
+    .get1 {
+        width: 100%;
+        max-width: 980px;
+    }
+
+    .get1 h3 {
+        font-size: 64px;
+        line-height: 1.05;
+        margin-bottom: 28px;
+    }
+
+    .get1 p {
+        max-width: 960px;
+        margin: 0 auto 42px;
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .free-button {
+        gap: 20px;
+    }
+
+    .free-button .btn,
+    .primary1,
+    .secondary1 {
+        min-width: 200px;
+        min-height: 50px;
+        padding: 0 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .footer-down {
+        width: calc(100% - 48px);
+        padding: 28px 0 30px;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .footer {
+        width: calc(100% - 96px);
+    }
+
+    .footer-in {
+        flex-wrap: wrap;
+        gap: 6px 20px;
+        max-width: 760px;
+        align-items: center;
+    }
+
+    .footer-in span,
+    .footer-in a {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .footer-icons {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .footer-select {
+        padding: 0;
+        font-size: 14px;
+        gap: 8px;
+    }
+
+    .bi-linkedin,
+    .bi-instagram,
+    .bi-youtube,
+    .bi-twitter-x,
+    .bi-tiktok,
+    .bi-twitch,
+    .gitt {
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width: 1200px) {
+
+    .platform-drops,
+    .solution-drops,
+    .resources-drops,
+    .open-drops,
+    .enterprise-drops {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+        width: 100%;
+        padding: 14px 16px;
+        position: relative;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    .menu-toggle {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-toggle i {
+        font-size: 28px;
+    }
+
+    .header-left {
+        gap: 16px;
+        flex: 0 0 auto;
+    }
+
+    .brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .git {
+        font-size: 2rem;
+    }
+
+    .header-right {
+        margin-left: auto;
+        gap: 12px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .iconsearch {
+        display: none;
+    }
+
+    .header-bttn {
+        gap: 12px;
+    }
+
+    .signin a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 35px;
+        padding: 0 16px;
+        border: 1px solid rgba(240, 246, 252, 0.9);
+        border-radius: 8px;
+    }
+
+    .signup {
+        display: none;
+    }
+
+    .hero {
+        min-height: 540px;
+    }
+
+    .content {
+        width: calc(100% - 40px);
+        max-width: 880px;
+        padding: 72px 0 82px;
+    }
+
+    .content h1 {
+        max-width: 820px;
+        font-size: 48px;
+        line-height: 1.06;
+        margin-bottom: 20px;
+    }
+
+    .content p {
+        max-width: 620px;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    .buttons,
+    .free-button {
+        flex-wrap: nowrap;
+        gap: 16px;
+    }
+
+    .buttons .btn {
+        width: 194px;
+        min-height: 52px;
+    }
+
+    .just {
+        margin: -24px auto 0;
+        padding-top: 80px;
+    }
+
+    .justs h1 {
+        max-width: 440px;
+        font-size: 44px;
+        line-height: 1.12;
+    }
+
+    .cards {
+        width: calc(100% - 48px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 26px 24px;
+        padding: 44px 0 64px;
+    }
+
+    .card1 {
+        margin-top: 0;
+        min-height: 320px;
+        padding: 34px 32px 30px;
+        border-radius: 28px;
+    }
+
+    .card1 .bi-globe,
+    .card1 .bi-stack,
+    .card1 .bi-star {
+        width: 54px;
+        padding: 13px;
+        font-size: 22px;
+        line-height: 1;
+        margin-bottom: 30px;
+    }
+
+    .card1 h1 {
+        font-size: 18px;
+        line-height: 1.35;
+        padding-top: 30px;
+        margin-bottom: 22px;
+    }
+
+    .card1 p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .grade {
+        width: calc(100% - 48px);
+        display: grid;
+        grid-template-columns: minmax(0, 0.95fr) minmax(360px, 1fr);
+        gap: 24px;
+        align-items: stretch;
+        padding: 20px 20px 20px 34px;
+        border-radius: 30px;
+    }
+
+    .grade1 {
+        padding: 16px 8px 16px 0;
+        line-height: normal;
+    }
+
+    .grade1 .bi-globe {
+        font-size: 26px;
+        margin-bottom: 34px;
+    }
+
+    .grade1 h2 {
+        width: 60%;
+        max-width: 360px;
+        font-size: 27px;
+        line-height: 1.18;
+        padding-top: 40px;
+        margin-bottom: 120px;
+    }
+
+    .grade > div:last-child {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .grade img {
+        width: min(480px, 100%);
+        height: auto;
+        max-width: 480px;
+        padding: 0;
+        border-radius: 18px;
+        align-self: center;
+    }
+
+    .menu-links1 {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .solve {
+        padding-top: 112px;
+    }
+
+    .solve1 {
+        line-height: 1;
+    }
+
+    .solve1 h1 {
+        max-width: 520px;
+        font-size: 40px;
+        line-height: 1.18;
+        margin-bottom: 30px;
+    }
+
+    .solve1 a {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .healthcare {
+        width: calc(100% - 48px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 26px;
+        padding: 46px 0 66px;
+    }
+
+    .healthcare1 {
+        margin-top: 0;
+        min-height: 280px;
+        padding: 34px 32px 30px;
+        border-radius: 28px;
+    }
+
+    .healthcare1 .bi-heart,
+    .healthcare1 .bi-stack,
+    .healthcare1 .bi-wrench {
+        width: 54px;
+        padding: 13px;
+        font-size: 22px;
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+
+    .healthcare1 h1 {
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .healthcare1 p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .healthcare1 a {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: auto;
+    }
+
+    .want {
+        padding-top: 112px;
+    }
+
+    .want1 {
+        line-height: 1;
+    }
+
+    .want1 h1 {
+        max-width: 520px;
+        font-size: 40px;
+        line-height: 1.18;
+        margin-bottom: 30px;
+    }
+
+    .want1 a {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .modern {
+        width: calc(100% - 48px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 26px;
+        padding: 46px 0 66px;
+    }
+
+    .modern1 {
+        margin-top: 0;
+        min-height: 280px;
+        padding: 34px 32px 30px;
+        border-radius: 28px;
+    }
+
+    .modern1 .bi-ui-checks-grid,
+    .modern1 .bi-shield-check,
+    .modern1 .bi-lightning-charge {
+        width: 54px;
+        padding: 13px;
+        font-size: 22px;
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+
+    .modern1 h1 {
+        font-size: 18px;
+        line-height: 1.35;
+    }
+
+    .modern1 p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .modern1 a {
+        font-size: 16px;
+        line-height: 1.4;
+        margin-top: auto;
+    }
+
+    .adopt {
+        padding-top: 112px;
+    }
+
+    .adopt1 {
+        line-height: 1;
+    }
+
+    .adopt1 h1 {
+        max-width: 760px;
+        font-size: 38px;
+        line-height: 1.18;
+        margin-bottom: 30px;
+    }
+
+    .adopt1 a {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .software {
+        width: calc(100% - 48px);
+    }
+
+    .software-con {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 36px 38px;
+        padding: 46px 0 72px;
+    }
+
+    .software1 {
+        margin-top: 0;
+        gap: 24px;
+    }
+
+    .software1 img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 18px;
+    }
+
+    .software1 p {
+        display: none;
+    }
+
+    .software1 a {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .getbg {
+        background-color: #f6f8fa;
+        padding: 64px 40px 0;
+    }
+
+    .get {
+        width: 100%;
+        max-width: 940px;
+        padding: 96px 56px 100px;
+        border: 1px solid #d0d7de;
+    }
+
+    .get1 {
+        max-width: 760px;
+    }
+
+    .get1 h3 {
+        font-size: 58px;
+        line-height: 1.08;
+        margin-bottom: 26px;
+    }
+
+    .get1 p {
+        max-width: 760px;
+        margin: 0 auto 36px;
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .free-button {
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .free-button .btn,
+    .btn.primary1,
+    .btn.secondary1 {
+        min-width: 194px;
+        min-height: 50px;
+        padding: 0 32px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .btn.primary1 {
+        background: #1f883d;
+    }
+
+    .btn.secondary1 {
+        background-color: #eaeef2;
+        border-color: #eaeef2;
+        color: rgb(36, 41, 47);
+    }
+
+    .footer {
+        width: calc(100% - 80px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 64px;
+        padding: 76px 0 72px;
+        border: none;
+    }
+
+    .footer-left {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .footer-left img {
+        width: 160px;
+        height: auto;
+    }
+
+    .footer-left h5 {
+        font-size: 16px;
+        line-height: 1.45;
+        margin-top: 34px;
+        margin-bottom: 4px;
+    }
+
+    .footer-left p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .footer-left button {
+        width: 140px;
+        padding: 16px 20px;
+        font-size: 15px;
+        line-height: 1.2;
+        border-color: #d0d7de;
+        border-radius: 8px;
+        background-color: #fff;
+    }
+
+    .footer-navs {
+        width: 100%;
+        grid-template-columns: repeat(4, minmax(120px, 1fr));
+        gap: 48px;
+        border: none;
+        padding-top: 0;
+    }
+
+    .footer-list li {
+        font-size: 14px;
+        line-height: 2.9;
+    }
+
+    .footer-list li:first-child {
+        line-height: 1.4;
+        margin-bottom: 16px;
+        color: rgb(87, 96, 106);
+    }
+
+    .footer-list a {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .sec {
+        background-color: #f6f8fa;
+    }
+
+    .footer-down {
+        width: calc(100% - 80px);
+        padding: 22px 0 34px;
+        align-items: flex-start;
+        gap: 28px;
+    }
+
+    .footer-in {
+        flex: 1;
+        max-width: 760px;
+        flex-wrap: wrap;
+        gap: 2px 22px;
+        align-items: flex-start;
+    }
+
+    .footer-in span,
+    .footer-in a {
+        font-size: 13px;
+        line-height: 1.45;
+        color: #57606a;
+    }
+
+    .footer-icons {
+        flex: 0 0 auto;
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        justify-content: end;
+        align-items: center;
+        column-gap: 20px;
+        row-gap: 10px;
+    }
+
+    .footer-icons > a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bi-linkedin,
+    .bi-instagram,
+    .bi-youtube,
+    .bi-twitter-x,
+    .bi-tiktok,
+    .bi-twitch,
+    .gitt {
+        font-size: 18px;
+        color: #57606a;
+    }
+
+    .footer-select {
+        grid-column: 1 / span 3;
+        padding: 0;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #57606a;
+    }
+
+    .footer-select .bi-globe {
+        font-size: 17px;
+        color: #57606a;
+    }
+
+    select {
+        width: 86px;
+        padding-left: 0;
+        font-size: 13px;
+        color: #57606a;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 12px 14px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .iconsearch {
+        display: none;
+    }
+
+    .header-bttn {
+        gap: 12px;
+    }
+
+    .header-bttn .signup-btn {
+        padding: 7px 10px;
+    }
+
+    .content {
+        width: calc(100% - 32px);
+        max-width: 720px;
+        padding: 92px 0 74px;
+    }
+
+    .content h1 {
+        max-width: 660px;
+        font-size: 34px;
+        line-height: 1.22;
+        margin-bottom: 26px;
+        letter-spacing: -0.03em;
+    }
+
+    .content p {
+        max-width: 640px;
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 38px;
+    }
+
+    .buttons,
+    .free-button {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .btn,
+    .btn.primary,
+    .btn.secondary,
+    .btn.primary1,
+    .btn.secondary1 {
+        width: 224px;
+        min-width: 224px;
+        min-height: 48px;
+        text-align: center;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .content {
+        top: 0;
+        width: calc(100% - 32px);
+        margin: 0 auto;
+    }
+
+    .just {
+        margin: -20px auto 0;
+        padding-top: 72px;
+    }
+
+    .justs h1 {
+        max-width: 420px;
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: -0.03em;
+    }
+
+    .cards {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 46px 0 56px;
+    }
+
+    .card1 {
+        min-height: 0;
+        padding: 32px 32px 28px;
+        border-radius: 28px;
+    }
+
+    .card1 .bi-globe,
+    .card1 .bi-stack,
+    .card1 .bi-star {
+        width: 54px;
+        height: 54px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .card1 h1 {
+        font-size: 18px;
+        line-height: 1.35;
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .card1 p {
+        max-width: 620px;
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 26px;
+    }
+
+    .card1 a {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .grade {
+        width: calc(100% - 24px);
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding: 34px 28px 0;
+        border-radius: 24px;
+    }
+
+    .grade1 {
+        padding: 8px 8px 0;
+    }
+
+    .grade1 .bi-globe {
+        width: 64px;
+        height: 64px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        margin-bottom: 34px;
+    }
+
+    .grade1 h2 {
+        width: 100%;
+        max-width: 540px;
+        font-size: 30px;
+        line-height: 1.22;
+        padding-top: 0;
+        margin-bottom: 28px;
+    }
+
+    .menu-links1 {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .grade > div:last-child {
+        display: block;
+    }
+
+    .grade img {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        border-radius: 22px;
+    }
+
+    .solvebg {
+        padding-top: 56px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+    .solve {
+        padding-top: 0;
+    }
+
+    .solve1 {
+        line-height: normal;
+    }
+
+    .solve1 h1 {
+        max-width: 460px;
+        font-size: 34px;
+        line-height: 1.18;
+        margin-bottom: 28px;
+        letter-spacing: -0.03em;
+    }
+
+    .solve1 a {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .healthcare {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 50px 0 56px;
+    }
+
+    .healthcare1 {
+        min-height: 0;
+        padding: 32px 32px 28px;
+        border-radius: 28px;
+    }
+
+    .healthcare1 .bi-heart,
+    .healthcare1 .bi-stack,
+    .healthcare1 .bi-wrench {
+        width: 54px;
+        height: 54px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .healthcare1 h1 {
+        font-size: 18px;
+        line-height: 1.35;
+        margin-bottom: 24px;
+    }
+
+    .healthcare1 p {
+        max-width: 640px;
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 26px;
+    }
+
+    .healthcare1 a {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .want {
+        padding-top: 56px;
+    }
+
+    .want1 {
+        line-height: normal;
+    }
+
+    .want1 h1 {
+        max-width: 460px;
+        font-size: 34px;
+        line-height: 1.18;
+        margin-bottom: 28px;
+        letter-spacing: -0.03em;
+    }
+
+    .want1 a {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .modern {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 50px 0 56px;
+    }
+
+    .modern1 {
+        min-height: 0;
+        padding: 32px 32px 28px;
+        border-radius: 28px;
+    }
+
+    .modern1 .bi-ui-checks-grid,
+    .modern1 .bi-shield-check,
+    .modern1 .bi-lightning-charge {
+        width: 54px;
+        height: 54px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .modern1 h1 {
+        font-size: 18px;
+        line-height: 1.35;
+        margin-bottom: 24px;
+    }
+
+    .modern1 p {
+        max-width: 640px;
+        font-size: 15px;
+        line-height: 1.55;
+        margin-bottom: 26px;
+    }
+
+    .modern1 a {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .adopt {
+        padding-top: 56px;
+    }
+
+    .adopt1 {
+        line-height: normal;
+    }
+
+    .adopt1 h1 {
+        max-width: 560px;
+        font-size: 34px;
+        line-height: 1.18;
+        margin-bottom: 28px;
+        letter-spacing: -0.03em;
+    }
+
+    .adopt1 a {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .software {
+        width: calc(100% - 36px);
+    }
+
+    .software-con {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding: 48px 0 56px;
+    }
+
+    .software1 {
+        margin-top: 0;
+        gap: 18px;
+    }
+
+    .software1 img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+    .software1 a {
+        font-size: 16px;
+        line-height: 1.45;
+    }
+
+    .getbg {
+        background-color: #f6f8fa;
+        padding: 54px 18px 0;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+
+    .get {
+        width: 100%;
+        max-width: none;
+        padding: 88px 40px 78px;
+        border: 1px solid #d0d7de;
+    }
+
+    .get1 {
+        max-width: 690px;
+    }
+
+    .get1 h3 {
+        font-size: 38px;
+        line-height: 1.16;
+        margin-bottom: 28px;
+        letter-spacing: -0.03em;
+    }
+
+    .get1 p {
+        max-width: 680px;
+        margin: 0 auto 40px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .free-button {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .free-button .btn,
+    .btn.primary1,
+    .btn.secondary1 {
+        width: min(220px, 100%);
+        max-width: 220px;
+        min-width: 0;
+        flex: 0 1 220px;
+        min-height: 50px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .footer {
+        width: calc(100% - 68px);
+        gap: 58px;
+        padding: 68px 0 56px;
+    }
+
+    .footer-left {
+        max-width: 360px;
+    }
+
+    .footer-left img {
+        width: 130px;
+    }
+
+    .footer-left h5 {
+        font-size: 16px;
+        line-height: 1.45;
+        margin-top: 30px;
+        margin-bottom: 6px;
+    }
+
+    .footer-left p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+
+    .footer-left button {
+        width: 154px;
+        padding: 17px 20px;
+        font-size: 15px;
+    }
+
+    .footer-navs {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 34px;
+    }
+
+    .footer-list li {
+        font-size: 13px;
+        line-height: 2.55;
+    }
+
+    .footer-list li:first-child {
+        margin-bottom: 14px;
+    }
+
+    .footer-list a {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .footer-down {
+        width: calc(100% - 68px);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 4px 0 30px;
+    }
+
+    .footer-in {
+        max-width: 100%;
+        gap: 4px 20px;
+        align-items: flex-start;
+    }
+
+    .footer-in span,
+    .footer-in a {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .footer-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .footer-select {
+        grid-column: auto;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-left: 10px;
+    }
+
+    .bi-linkedin,
+    .bi-instagram,
+    .bi-youtube,
+    .bi-twitter-x,
+    .bi-tiktok,
+    .bi-twitch,
+    .gitt {
+        font-size: 17px;
+    }
+
+    .footer-select .bi-globe {
+        font-size: 18px;
+    }
+
+    select {
+        width: 82px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 12px 14px;
+    }
+
+    .header-left {
+        gap: 12px;
+    }
+
+    .menu-toggle {
+        width: 32px;
+        height: 32px;
+    }
+
+    .git {
+        font-size: 2.2rem;
+    }
+
+    .header-right {
+        gap: 10px;
+    }
+
+    .header-bttn a {
+        font-size: 13px;
+    }
+
+    .signin a {
+        min-height: 35px;
+        padding: 0 14px;
+        background-color: transparent;
+    }
+
+    .content {
+        width: calc(100% - 24px);
+        max-width: 460px;
+        padding: 84px 0 54px;
+    }
+
+    .content h1 {
+        max-width: 420px;
+        font-size: 30px;
+        line-height: 1.16;
+        margin-bottom: 24px;
+        letter-spacing: -0.03em;
+    }
+
+    .content p {
+        max-width: 420px;
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 34px;
+    }
+
+    .brand {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header-bttn .signup-btn {
+        display: none;
+    }
+
+    .buttons {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .buttons .btn,
+    .btn.primary,
+    .btn.secondary {
+        width: min(220px, 100%);
+        max-width: 220px;
+        min-width: 0;
+        flex: 0 1 220px;
+        min-height: 50px;
+        padding: 0 18px;
+        border-radius: 12px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .footer {
+        width: calc(100% - 32px);
+        gap: 40px;
+        padding: 56px 0 44px;
+    }
+
+    .footer-left {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .footer-left img {
+        width: 130px;
+    }
+
+    .footer-left h5 {
+        font-size: 15px;
+        line-height: 1.45;
+        margin-top: 28px;
+        margin-bottom: 4px;
+    }
+
+    .footer-left p {
+        max-width: 240px;
+        font-size: 14px;
+        line-height: 1.55;
+        margin-bottom: 20px;
+    }
+
+    .footer-left button {
+        width: 122px;
+        padding: 14px 18px;
+        font-size: 15px;
+        line-height: 1.2;
+        border-radius: 8px;
+    }
+
+    .footer-navs {
+        width: 100%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 34px 22px;
+    }
+
+    .footer-list li {
+        font-size: 13px;
+        line-height: 2.15;
+    }
+
+    .footer-list li:first-child {
+        margin-bottom: 12px;
+        line-height: 1.35;
+    }
+
+    .footer-list a {
+        font-size: 13px;
+        line-height: 1.45;
+    }
+
+    .footer-down {
+        width: calc(100% - 32px);
+        gap: 20px;
+        padding: 2px 0 26px;
+    }
+
+    .footer-in {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 18px;
+        align-items: flex-start;
+    }
+
+    .footer-in span,
+    .footer-in a {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+
+    .footer-icons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .bi-linkedin,
+    .bi-instagram,
+    .bi-youtube,
+    .bi-twitter-x,
+    .bi-tiktok,
+    .bi-twitch,
+    .gitt {
+        font-size: 18px;
+    }
+
+    .footer-select {
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+        gap: 8px;
+    }
+
+    .footer-select .bi-globe {
+        font-size: 18px;
+    }
+
+    select {
+        padding-right: 8px;
+    }
+}

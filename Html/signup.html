@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="../Multimedia/Images/github-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <title>Sign up to GitHub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+            background-color: #f6f8fa;
+            color: #0f172a;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .signup-shell {
+            width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+            gap: 0;
+            min-height: 100vh;
+        }
+
+        .top-link1 {
+            /* text-align: right; */
+            margin-bottom: 52px;
+            font-size: 16px;
+            display: none;
+
+        }
+
+        .top-link1 span {
+            color: white;
+        }
+
+        .top-link1>a {
+            color: white;
+            margin-left: 10px;
+
+        }
+
+        .top-link1 i {
+            font-size: 10px;
+        }
+
+        .promo {
+            background: url("../Multimedia/Images/bg-darkest-medium@2x.webp") center/cover;
+            border-radius: 0;
+            overflow: hidden;
+            padding: 64px clamp(32px, 8vw, 170px);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 40px;
+            min-height: 100vh;
+        }
+
+        .promo-copy {
+            width: min(100%, 470px);
+        }
+
+        .promo h1 {
+            font-family: "Mona Sans", Arial, Helvetica, sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            line-height: 1.15;
+            margin-bottom: 14px;
+            max-width: 430px;
+        }
+
+        .promo p {
+            font-family: "Mona Sans", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.92);
+            max-width: 450px;
+            line-height: 1.55;
+        }
+
+        .promo a {
+            font-family: "Mona Sans", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.4;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+
+        .column-list>a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 14px;
+        }
+
+        .column-list>a .bi-chevron-down {
+            transition: transform 0.25s ease;
+        }
+
+        .column-drops {
+            display: none;
+            margin-top: 14px;
+            max-width: 460px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .column1 {
+            display: grid;
+            grid-template-columns: 16px 1fr;
+            gap: 12px;
+            align-items: start;
+        }
+
+        .column1 i {
+            font-size: 16px;
+            line-height: 1.4;
+            margin-top: 1px;
+        }
+
+        .column1 h3 {
+            font-family: "Mona Sans", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 21px;
+            color: rgb(255, 255, 255);
+        }
+
+        .column1 p {
+            font-family: "Mona Sans", Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+            color: rgb(255, 255, 255);
+        }
+
+        .column-list:hover .column-drops {
+            display: block;
+        }
+
+        .column-list:hover>a .bi-chevron-down {
+            transform: rotate(180deg);
+        }
+
+        .column-list>a i {
+            font-size: 12px;
+        }
+
+        .promo img {
+            width: min(100%, 600px);
+            align-self: center;
+        }
+
+        .panel {
+            width: min(100%, 565px);
+            margin: 0 auto;
+            padding: 32px 20px 48px;
+        }
+
+        .top-link {
+            text-align: right;
+            margin-bottom: 52px;
+            font-size: 16px;
+        }
+
+        .top-link span {
+            color: #4a5568;
+        }
+
+        .top-link a {
+            color: #111827;
+            margin-left: 10px;
+        }
+
+        .top-link i {
+            font-size: 10px;
+        }
+
+
+        h2 {
+            font-family: "Mona Sans", Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            color: rgb(36, 41, 47);
+            margin-bottom: 29px;
+        }
+
+        .social-buttons {
+            display: grid;
+            gap: 12px;
+        }
+
+        .social-btn {
+            width: 100%;
+            border: 1px solid gray;
+            border-radius: 8px;
+            background: rgba(245, 247, 250, 0.659);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .social-btn:hover {
+            background: #eef2f7;
+        }
+
+        .social-btn img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .social-btn i {
+            font-size: 18px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 24px 0;
+            color: #5b6472;
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #c8d1db;
+
+        }
+
+        .field {
+            margin-bottom: 22px;
+        }
+
+        .field label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .required {
+            color: #5b6472;
+            margin-left: 2px;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            border: 1px solid #c8d1db;
+            border-radius: 8px;
+            padding: 10px 14px;
+            font-size: 16px;
+            background: #fff;
+            color: #111827;
+            outline: none;
+            min-width: 0;
+        }
+
+        .field input:focus,
+        .field select:focus {
+            border-color: #0969da;
+            box-shadow: 0 0 0 1px #0969da;
+        }
+
+        .hint {
+            margin-top: 8px;
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.45;
+        }
+
+        .email-preferences {
+            margin-bottom: 20px;
+        }
+
+        .email-preferences h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .check-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            color: #111827;
+            line-height: 1.35;
+        }
+
+        .check-row input {
+            margin-top: 6px;
+            width: 18px;
+            height: 18px;
+            accent-color: #0969da;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background: #1f2937;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px 20px;
+            cursor: pointer;
+            margin-bottom: 18px;
+        }
+
+        .submit-btn:hover {
+            background: #111827;
+        }
+
+        .submit-btn i {
+            font-size: 12px;
+        }
+
+        .legal {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.5;
+            overflow-wrap: anywhere;
+        }
+
+        .legal a {
+            color: #0969da;
+        }
+
+        @media(max-width:1248px) {
+            .promo {
+                padding-inline: clamp(24px, 6vw, 96px);
+            }
+
+            .promo h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .top-link1 {
+                display: block;
+            }
+
+            .top-link {
+                display: none;
+            }
+
+            .signup-shell {
+                grid-template-columns: 1fr;
+            }
+
+            .promo {
+                min-height: auto;
+                padding: 40px clamp(20px, 6vw, 56px);
+            }
+
+            .promo h1 {
+                font-size: 28px;
+                font-weight: 500;
+            }
+
+            .panel {
+                margin: 0 auto;
+                width: min(100%, 680px);
+                padding-top: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .promo {
+                padding: 28px 20px 32px;
+                gap: 28px;
+            }
+
+            .top-link1 {
+                margin-bottom: 32px;
+            }
+
+            .promo h1 {
+                font-size: 28px;
+                font-weight: 500;
+                max-width: 100%;
+            }
+
+            .column-drops {
+                display: block;
+            }
+
+            .promo img {
+                display: none;
+            }
+
+            .promo p,
+            .column1 p,
+            .column1 h3 {
+                max-width: 100%;
+            }
+
+            .top-link {
+                margin-bottom: 24px;
+                font-size: 16px;
+            }
+
+            h2 {
+                font-size: 28px;
+                line-height: 1.2;
+                margin-bottom: 18px;
+            }
+
+            .social-btn,
+            .divider,
+            .field input,
+            .field select,
+            .hint,
+            .check-row,
+            .legal {
+                font-size: 16px;
+            }
+
+            .field label,
+            .email-preferences h3 {
+                font-size: 16px;
+            }
+
+            .submit-btn {
+                font-size: 17px;
+                padding: 14px;
+            }
+
+            .panel {
+                padding: 28px 20px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-link1,
+            .top-link {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+
+            .top-link1>a,
+            .top-link a {
+                margin-left: 6px;
+            }
+
+            .promo h1,
+            h2 {
+                font-size: 24px;
+            }
+
+            .social-btn {
+                padding: 12px 10px;
+                font-size: 15px;
+            }
+
+            .field input,
+            .field select,
+            .submit-btn {
+                font-size: 15px;
+            }
+
+            .check-row {
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="signup-shell">
+
+        <section class="promo">
+            <div class="promo-copy">
+                <div class="top-link1">
+                <span>Already have an account?</span>
+                <a href="./signin.html">Sign in <i class="bi bi-arrow-right"></i></a>
+            </div>
+                <h1>Create your free account</h1>
+                <p>Explore GitHub's core features for individuals and organizations.</p>
+
+                <div class="column-list">
+                    <a href="#">See what's included <i class="bi bi-chevron-down"></i></a>
+                    <div class="column-drops">
+                        <div class="column">
+                            <div class="column1">
+                                <i class="bi bi-check2"></i>
+                                <div>
+                                    <h3>Access to GitHub Copilot</h3>
+                                    <p>Increase your productivity and accelerate software development.</p>
+                                </div>
+                            </div>
+
+                            <div class="column1">
+                                <i class="bi bi-check2"></i>
+                                <div>
+                                    <h3>Unlimited repositories</h3>
+                                    <p>Collaborate securely on public and private projects.</p>
+                                </div>
+                            </div>
+
+                            <div class="column1">
+                                <i class="bi bi-check2"></i>
+                                <div>
+                                    <h3>Integrated code reviews</h3>
+                                    <p>Boost code quality with built-in review tools.</p>
+                                </div>
+                            </div>
+
+                            <div class="column1">
+                                <i class="bi bi-check2"></i>
+                                <div>
+                                    <h3>Automated workflows</h3>
+                                    <p>Save time with CI/CD integrations and GitHub Actions.</p>
+                                </div>
+                            </div>
+
+                            <div class="column1">
+                                <i class="bi bi-check2"></i>
+                                <div>
+                                    <h3>Community support</h3>
+                                    <p>Connect with developers worldwide for instant feedback and insights.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="../Multimedia/Images/tres-amigos@2x.webp" alt="Illustration of developers collaborating">
+        </section>
+
+        <section class="panel">
+            <div class="top-link">
+                <span>Already have an account?</span>
+                <a href="./signin.html">Sign in <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+            <h2>Sign up for GitHub</h2>
+
+            <div class="social-buttons">
+                <button class="social-btn">
+                    <img src="../Multimedia/Images/google.svg" alt="">
+                    Continue with Google
+                </button>
+                <button class="social-btn">
+                    <i class="bi bi-apple"></i>
+                    Continue with Apple
+                </button>
+            </div>
+
+            <div class="divider">or</div>
+
+            <form action="#" method="post">
+                <div class="field">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input id="email" name="email" type="email" placeholder="Email">
+                </div>
+
+                <div class="field">
+                    <label for="password">Password<span class="required">*</span></label>
+                    <input id="password" name="password" type="password" placeholder="Password">
+                    <p class="hint">Password should be at least 15 characters OR at least 8 characters including a
+                        number and a lowercase letter.</p>
+                </div>
+
+                <div class="field">
+                    <label for="username">Username<span class="required">*</span></label>
+                    <input id="username" name="username" type="text" placeholder="Username">
+                    <p class="hint">Username may only contain alphanumeric characters or single hyphens, and cannot
+                        begin or end with a hyphen.</p>
+                </div>
+
+                <div class="field">
+                    <label for="country">Your Country/Region<span class="required">*</span></label>
+                    <select id="country" name="country" required>
+                        <option value="Czech Republic" selected>Czech Republic</option>
+                        <option value="United States">United States</option>
+                        <option value="India">India</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Germany">Germany</option>
+                    </select>
+                    <p class="hint">For compliance reasons, we're required to collect country information to send you
+                        occasional updates and announcements.</p>
+                </div>
+
+                <div class="email-preferences">
+                    <h3>Email preferences</h3>
+                    <label class="check-row" for="updates">
+                        <input id="updates" name="updates" type="checkbox">
+                        <span>Receive occasional product updates and announcements</span>
+                    </label>
+                </div>
+
+                <button class="submit-btn" type="submit">Create account <i class="bi bi-chevron-right"></i></button>
+            </form>
+
+            <p class="legal">
+                By creating an account, you agree to the <a href="#">Terms of Service</a>. For more information about
+                GitHub's privacy practices, see the <a href="#">GitHub Privacy Statement</a>. We'll occasionally send
+                you account-related emails.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
