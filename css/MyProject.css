@@ -5792,7 +5792,7 @@ option {
   }
 
   .footer-select {
-    padding: 8px 0;
+    padding: 8px 30px;
   }
   .footer-left h5 {
     font-size: 18px;
@@ -5811,26 +5811,5 @@ option {
   .video video {
     width: 100%;
   }
-
-  /* .footer,
-  .footer-down {
-    width: calc(100% - 16px);
-  }
-
-  .footer {
-    padding: 28px 0;
-  }
-
-  .footer-select {
-    padding: 8px 0;
-  }
-  .footer-left h5 {
-    font-size: 18px;
-  }
-
-  .footer-icons {
-    flex-wrap: wrap;
-    gap: 14px;
-  } */
 
 }
