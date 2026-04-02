@@ -3770,11 +3770,11 @@ option {
   }
 
 
-  .video-section {
+  /* .video-section {
     min-height: 160vh;
     transform: translateY(1350px);
 
-  }
+  } */
 
   .capability-section {
     padding: 48px 16px 24px;
@@ -4269,13 +4269,13 @@ option {
 }
 
 
-@media(max-width:935px) {
+/* @media(max-width:935px) {
   .video-section {
     min-height: 160vh;
     transform: translateY(1450px);
 
-  }
-} 
+  } 
+}  */
 
 
 @media (max-width: 768px) {
@@ -5508,6 +5508,18 @@ option {
     font-size: 0.98rem;
   }
 
+  .video-section1 {
+    transform: translateY(-218px);
+    width: 90%;
+    padding-top: 10px;
+    /* height: 90%; */
+  }
+
+  .video-section1 video {
+    width: 95%;
+    /* height: 90%; */
+  }
+
   .workflow,
   .built,
   .lifecycle,
@@ -5676,10 +5688,6 @@ option {
 
   .try-image {
     width: calc(100% - 20px);
-  }
-
-  .video-section {
-    margin-top: -36px;
   }
 
   .startup {
