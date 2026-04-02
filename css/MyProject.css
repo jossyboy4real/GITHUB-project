@@ -1927,7 +1927,6 @@ nav .bi-chevron-down {
 
 .autofix img {
   width: 550px;
-  /* border: 1px solid white; */
   border-radius: 20px;
 
   box-shadow: 18px -50px 70px 30px #6e61bf;
@@ -1939,7 +1938,6 @@ nav .bi-chevron-down {
 }
 
 .security {
-  /* border: 1px solid white; */
   width: min(1300px, calc(100% - 48px));
   margin: auto;
   display: grid;
@@ -5406,7 +5404,7 @@ option {
   }
 
   .capability-section {
-    padding: 20px 16px 30px;
+    /* padding: 20px 16px 30px; */
   }
 
   .capability-shell {
